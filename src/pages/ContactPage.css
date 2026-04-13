@@ -1,0 +1,102 @@
+.contact-page {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  min-height: 70vh;
+}
+
+.contact-page h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.contact-page h1::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.contact-page form {
+  background: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-page input,
+.contact-page textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.contact-page input:focus,
+.contact-page textarea:focus {
+  outline: none;
+  border-color: #764ba2;
+  box-shadow: 0 0 0 3px rgba(118, 75, 162, 0.1);
+}
+
+.contact-page textarea {
+  resize: vertical;
+  font-family: inherit;
+}
+
+.contact-page button {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.contact-page button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+}
+
+.contact-page button:disabled {
+  background: #ccc;
+  transform: none;
+  cursor: not-allowed;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 0.8rem;
+  margin-top: 0.3rem;
+}
+
+.input-error {
+  border-color: #ff4444 !important;
+}
+
+@media (max-width: 768px) {
+  .contact-page {
+    padding: 2rem 1rem;
+  }
+  .contact-page form {
+    padding: 1.5rem;
+  }
+  .contact-page h1 {
+    font-size: 2rem;
+  }
+}

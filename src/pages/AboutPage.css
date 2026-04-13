@@ -1,0 +1,131 @@
+.about-page {
+  width: 100%;
+  min-height: 70vh;
+}
+
+.about-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.about-section.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-image {
+  flex: 1;
+}
+
+.about-image img {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.about-text p {
+  color: #666;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+.values-section {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.values-section h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+.values-section h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #667eea, #764ba2);
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.value-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+
+.value-card:hover {
+  transform: translateY(-5px);
+}
+
+.value-card h3 {
+  color: #764ba2;
+  margin-bottom: 0.5rem;
+}
+
+.value-card p {
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+  .about-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-section.reverse {
+    flex-direction: column;
+  }
+  .about-text h2::after {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .values-grid {
+    grid-template-columns: 1fr;
+  }
+}
