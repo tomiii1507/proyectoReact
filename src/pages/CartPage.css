@@ -25,6 +25,7 @@
 
 /* Carrito vacío */
 .empty-cart {
+  height: 100vh;
   text-align: center;
   padding: 4rem 2rem;
   background: linear-gradient(135deg, #f5f7fa, #e9ecef);
